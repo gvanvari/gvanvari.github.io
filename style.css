@@ -21,7 +21,7 @@ p{
 
 /* Transition */
 a, .btn {
-    transition: all 300 ms ease;
+    transition: all 300ms ease; /* property(all) duration timing-function */
 }
 
 /* Desktop Navigation */
@@ -86,7 +86,7 @@ a:hover {
     width: 100%;
     height: 2px;
     background-color: black;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out; /* property duration timing-function */
 }
 
 .menu-links {
@@ -97,7 +97,7 @@ a:hover {
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out; /* property duration timing-function */
 }
 
 .menu-links a {
@@ -107,7 +107,7 @@ a:hover {
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
-    transition:all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out; /* property duration timing-function */
 }
 
 .menu-links li {
@@ -146,7 +146,7 @@ a:hover {
 section {
     padding: 4vh 2rem; 
     margin: 0 auto 40px; 
-    max-width: 1400px; 
+    max-width: 1400px; /* changed from 1200px to 1400px */
     box-sizing: border-box;
     min-height: fit-content;
 }
@@ -189,7 +189,7 @@ section {
 }
 
 .title {
-    font-size: 3 rem;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -209,7 +209,7 @@ section {
 /* Buttons */
 .btn-container {
     display: flex;
-    justify-content: cneter;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -223,7 +223,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-    border: rgb(53,53,53) 0.1rem solid;
+    border: rgb(53,53,53) 0.1rem solid; /* color width style */
 }
 
 .btn-color-1:hover,
@@ -298,10 +298,10 @@ section {
 
 .details-container {
     padding: 1.5rem;
-    flex: 1;
+    flex: 1; /* flex-grow only (expands equally) */
     background: white;
     border-radius: 2rem;
-    border: rgb(53,53,53) 0.1rem solid;
+    border: rgb(53,53,53) 0.1rem solid; /* color width style */
     border-color: rgb(163,163,163);
     text-align: center;
 }
@@ -332,7 +332,7 @@ section {
 .section__pic-container {
     height: 400px;
     width: 400px;
-    margin: auto 0;
+    margin: auto 0; /* horizontal vertical */
 }
 
 /* Experience */
@@ -401,7 +401,7 @@ article .icon {
 }
 
 #projects .details-container {
-    flex: 1 1 300px;
+    flex: 1 1 300px; /* grow shrink basis - expands equally, min 300px width */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -417,7 +417,7 @@ article .icon {
     width: 100%;
     height: auto;
     max-width: 300px;
-    object-fit: cover;
+    object-fit: cover; /* fill space, maintain aspect ratio */
     margin-bottom: 1rem;
 }
 
@@ -448,7 +448,7 @@ article .icon {
 }
 
 #hobbies .details-container {
-    flex: 1 1 300px;
+    flex: 1 1 300px; /* grow shrink basis - expands equally, min 300px width */
     display: flex;
     flex-direction: column;
 }
@@ -458,7 +458,7 @@ article .icon {
     height: auto;
     border-radius: 2rem;
     margin-bottom: 1rem;
-    object-fit: cover;
+    object-fit: cover; /* fill space, maintain aspect ratio */
 }
 
 /* CONTACT */
@@ -476,7 +476,7 @@ article .icon {
     border: rgb(53,53,53) 0.1rem solid;
     border-color: rgb(163,163,163);
     background: (250,250,250);
-    margin: 2rem auto;
+    margin: 2rem auto; /* vertical horizontal */
     padding: 0.5rem;
 }
 
