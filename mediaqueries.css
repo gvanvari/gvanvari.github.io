@@ -42,7 +42,7 @@
     .section__pic-container {
         width: 275px;
         height: 275px;
-        margin: 0 auto 2 rem;
+        margin: 0 auto 2rem;
     }
     .about-container {
         margin-top: 0;
@@ -56,7 +56,7 @@
 @media screen and (max-width: 600px) {
     #contact,
     footer {
-        height: 83vh;
+        height: fit-content;
         margin-bottom: 0;
     }
     article {
@@ -69,10 +69,18 @@
     .about-container,
     .about-container2,
     .contact-info-upper-container,
-    .cert-container,
+    .cert-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1rem;
+    }
     .btn-container {
-        flex-wrap:wrap;
-        flex-direction: column;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .btn-container button {
+        flex: 1;
     }
     .contact-info-upper-container {
         flex-wrap: wrap;
@@ -115,8 +123,8 @@
         flex-direction: column;
     }
     .details-container {
-        flex-wrap: wrap;
-        flex-direction: column;
+        flex: 1 1 100%;
+        min-width: unset;
     }
     .details-container2 {
         flex-wrap: wrap;
@@ -125,6 +133,7 @@
     .skill-container {
         flex-wrap: wrap;
         flex-direction: row;
+        gap: 0.5rem;
     }
     .section-container {
         flex-wrap: wrap;
@@ -139,5 +148,12 @@
     #hobbies .details-container {
         flex: 1 1 100%;
         min-width: unset;
+    }
+    section {
+        margin: 0;
+        padding: 2vh 1rem;
+    }
+    .arrow {
+        display: block;
     }
 }
