@@ -405,6 +405,8 @@ article .icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem; /* spacing between image, title, description, button */
+    padding: 2rem;
 }
 
 .color-container {
