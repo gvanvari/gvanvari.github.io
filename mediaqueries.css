@@ -29,6 +29,7 @@
     .section-container {
         display: block;
         height: fit-content;
+        margin-bottom: 2rem;
     }
     .arrow {
         display: none;
@@ -62,7 +63,7 @@
     }
     #profile {
         height: fit-content;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
     }
     article {
         font-size: 1rem;
