@@ -28,6 +28,7 @@
     #profile,
     .section-container {
         display: block;
+        height: fit-content;
     }
     .arrow {
         display: none;
