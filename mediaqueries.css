@@ -9,6 +9,10 @@
     .about-container2 {
         flex-wrap: wrap;
     }
+    #projects .details-container,
+    #hobbies .details-container {
+        flex: 1 1 calc(50% - 1rem);
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -43,9 +47,13 @@
     .about-container {
         margin-top: 0;
     }
+    #projects .details-container,
+    #hobbies .details-container {
+        flex: 1 1 100%;
+    }
 }
 
-@media sreen and (max-wdith: 600px) {
+@media screen and (max-width: 600px) {
     #contact,
     footer {
         height: 83vh;
@@ -64,11 +72,11 @@
     .cert-container,
     .btn-container {
         flex-wrap:wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
     .contact-info-upper-container {
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
     .contact-info-container {
         margin: 0;
@@ -104,15 +112,15 @@
     }
     .about-detials-container {
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
     .details-container {
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
     .details-container2 {
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
     .skill-container {
         flex-wrap: wrap;
@@ -120,6 +128,16 @@
     }
     .section-container {
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
+    }
+    #projects .about-container,
+    #hobbies .about-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    #projects .details-container,
+    #hobbies .details-container {
+        flex: 1 1 100%;
+        min-width: unset;
     }
 }
