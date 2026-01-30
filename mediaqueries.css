@@ -9,8 +9,8 @@
     .about-container2 {
         flex-wrap: wrap;
     }
-    #projects .about-container {
-        grid-template-columns: repeat(2, 1fr);
+    .carousel-item {
+        min-width: calc(50% - 1rem);
     }
     #hobbies .details-container {
         flex: 1 1 calc(50% - 1rem);
@@ -51,8 +51,16 @@
     .about-container {
         margin-top: 0;
     }
-    #projects .about-container {
-        grid-template-columns: 1fr;
+    .carousel-container {
+        padding: 0 3rem;
+    }
+    .carousel-item {
+        min-width: 100%;
+    }
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
     }
     #hobbies .details-container {
         flex: 1 1 100%;

@@ -323,75 +323,88 @@
     <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="about-container">
-            <div class="details-container color-container">
-                <img 
-                    src="./assets/ask.png" 
-                    alt="Drug Safety MCP" 
-                    class="project-img"
-                />
-                <h2 class="experience-sub-title project-title">Drug Safety Intelligence MCP</h2>
-                <p>
-                    Intelligent drug safety analysis powered by FDA data, AI insights, and Model Context Protocol. Features AI-powered summaries, real-time FDA data, and multiple user interfaces.
-                </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/drug-safety-mcp'">
-                        GitHub
-                    </button>
+        <div class="carousel-container">
+            <button class="carousel-arrow carousel-arrow-left" onclick="slideProjects(-1)" id="leftArrow">
+                &#10094;
+            </button>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="projectCarousel">
+                    <div class="carousel-item">
+                        <div class="details-container color-container">
+                            <img 
+                                src="./assets/ask.png" 
+                                alt="Drug Safety MCP" 
+                                class="project-img"
+                            />
+                            <h2 class="experience-sub-title project-title">Drug Safety Intelligence MCP</h2>
+                            <p>
+                                Intelligent drug safety analysis powered by FDA data, AI insights, and Model Context Protocol. Features AI-powered summaries, real-time FDA data, and multiple user interfaces.
+                            </p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/drug-safety-mcp'">
+                                    GitHub
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="details-container color-container">
+                            <img 
+                                src="./assets/gradio-ui.png" 
+                                alt="group chat" 
+                                class="project-img"
+                            />
+                            <h2 class="experience-sub-title project-title">Multimodal AI Groupchat</h2>
+                            <p>
+                                Autogen powered groupchat with human in loop capability.
+                            </p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/mulitmodal-ai-autogen'">
+                                    GitHub
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="details-container color-container">
+                            <img 
+                                src="./assets/progress.png" 
+                                alt="workout Dashboard" 
+                                class="project-img"
+                            />
+                            <h2 class="experience-sub-title project-title">Workout Tracker</h2>
+                            <p>
+                                A web application that allows users to track their workouts and monitor their progress over time through an intuitive interface.
+                            </p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/workout-tracker'">
+                                    GitHub
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="details-container color-container">
+                            <img 
+                                src="./assets/splunk-covid-dashboard.png" 
+                                alt="splunk Dashboard" 
+                                class="project-img"
+                            />
+                            <h2 class="experience-sub-title project-title">Splunk COVID-19 Dashboard</h2>
+                            <p>
+                                A Splunk dashboard that visualizes COVID-19 data using various charts and graphs to provide insights into the pandemic's trends and impact.
+                            </p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/splunk-covid-19'">
+                                    GitHub
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <img 
-                    src="./assets/gradio-ui.png" 
-                    alt="group chat" 
-                    class="project-img"
-                />
-                <h2 class="experience-sub-title project-title">Multimodal AI Groupchat</h2>
-                <p>
-                    Autogen powered groupchat with human in loop capability.
-                </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/mulitmodal-ai-autogen'">
-                        GitHub
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container hidden-project">
-                <img 
-                    src="./assets/progress.png" 
-                    alt="workout Dashboard" 
-                    class="project-img"
-                />
-                <h2 class="experience-sub-title project-title">Workout Tracker</h2>
-                <p>
-                    A web application that allows users to track their workouts and monitor their progress over time through an intuitive interface.
-                </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/workout-tracker'">
-                        GitHub
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container hidden-project">
-                <img 
-                    src="./assets/splunk-covid-dashboard.png" 
-                    alt="splunk Dashboard" 
-                    class="project-img"
-                />
-                <h2 class="experience-sub-title project-title">Splunk COVID-19 Dashboard</h2>
-                <p>
-                    A Splunk dashboard that visualizes COVID-19 data using various charts and graphs to provide insights into the pandemic's trends and impact.
-                </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gvanvari/splunk-covid-19'">
-                        GitHub
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="show-more-container">
-            <button class="btn btn-color-1" id="toggleProjectsBtn" onclick="toggleProjects()">
-                Show More Projects
+            <button class="carousel-arrow carousel-arrow-right" onclick="slideProjects(1)" id="rightArrow">
+                &#10095;
             </button>
         </div>
         <img 

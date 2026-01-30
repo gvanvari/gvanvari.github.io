@@ -6,20 +6,39 @@ function toggleMenu(){
     icon.classList.toggle("open")
 }
 
-function toggleProjects() {
-    const hiddenProjects = document.querySelectorAll('.hidden-project');
-    const btn = document.getElementById('toggleProjectsBtn');
-    const isHidden = hiddenProjects[0].classList.contains('hidden-project');
+let currentSlide = 0;
+const itemsPerView = 3;
+
+function slideProjects(direction) {
+    const carousel = document.getElementById('projectCarousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    const maxSlide = totalItems - itemsPerView;
     
-    hiddenProjects.forEach(project => {
-        if (isHidden) {
-            project.classList.remove('hidden-project');
-            project.classList.add('visible-project');
-        } else {
-            project.classList.remove('visible-project');
-            project.classList.add('hidden-project');
-        }
-    });
+    currentSlide += direction;
     
-    btn.textContent = isHidden ? 'Show Less Projects' : 'Show More Projects';
+    if (currentSlide < 0) {
+        currentSlide = 0;
+    } else if (currentSlide > maxSlide) {
+        currentSlide = maxSlide;
+    }
+    
+    const slideWidth = items[0].offsetWidth + 32; // item width + gap
+    carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    
+    updateArrows(maxSlide);
 }
+
+function updateArrows(maxSlide) {
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+    
+    leftArrow.disabled = currentSlide === 0;
+    rightArrow.disabled = currentSlide >= maxSlide;
+}
+
+// Initialize on page load
+window.addEventListener('load', () => {
+    const items = document.querySelectorAll('.carousel-item');
+    updateArrows(items.length - itemsPerView);
+});
