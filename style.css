@@ -411,13 +411,16 @@ article .icon {
 
 .carousel-track {
     display: flex;
+    flex-direction: row;
     transition: transform 0.5s ease-in-out;
     gap: 2rem;
+    width: 100%;
 }
 
 .carousel-item {
-    min-width: calc(33.333% - 1.333rem);
+    min-width: calc((100% - 4rem) / 3);
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .carousel-arrow {
