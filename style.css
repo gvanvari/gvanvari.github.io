@@ -396,19 +396,22 @@ article .icon {
 }
 
 #projects .about-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 #projects .details-container {
-    flex: 1 1 300px; /* grow shrink basis - expands equally, min 300px width */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem; /* spacing between image, title, description, button */
     padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .color-container {
@@ -432,6 +435,24 @@ article .icon {
 
 .project-btn {
     width: 100%;
+}
+
+.hidden-project {
+    display: none;
+}
+
+.visible-project {
+    display: flex;
+}
+
+.show-more-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.show-more-container .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
 }
 
 .cert-img {

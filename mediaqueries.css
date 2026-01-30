@@ -9,7 +9,9 @@
     .about-container2 {
         flex-wrap: wrap;
     }
-    #projects .details-container,
+    #projects .about-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
     #hobbies .details-container {
         flex: 1 1 calc(50% - 1rem);
     }
@@ -49,7 +51,9 @@
     .about-container {
         margin-top: 0;
     }
-    #projects .details-container,
+    #projects .about-container {
+        grid-template-columns: 1fr;
+    }
     #hobbies .details-container {
         flex: 1 1 100%;
     }
