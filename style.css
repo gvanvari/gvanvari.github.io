@@ -395,7 +395,15 @@ article .icon {
     position: relative;
 }
 
+#projects .about-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 #projects .details-container {
+    flex: 1 1 300px; /* grow shrink basis - expands equally, min 300px width */
     display: flex;
     flex-direction: column;
     align-items: center;
