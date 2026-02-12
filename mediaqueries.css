@@ -55,9 +55,10 @@
         padding: 0 3rem;
     }
     .carousel-item {
-        min-width: 100%;
+        min-width: 100% !important;
     }
     .carousel-arrow {
+        display: block;
         width: 40px;
         height: 40px;
         font-size: 1.5rem;
@@ -169,6 +170,27 @@
         flex: 1 1 100%;
         min-width: unset;
     }
+    
+    /* Hide carousel on mobile and show projects vertically */
+    .carousel-container {
+        padding: 0;
+        display: block;
+    }
+    .carousel-wrapper {
+        overflow: visible;
+    }
+    .carousel-track {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem;
+        transform: none !important;
+    }
+    .carousel-item {
+        min-width: 100% !important;
+        width: 100%;
+    }
+    .carousel-arrow {
+        display: none !important;
     }
     .arrow {
         display: block;
