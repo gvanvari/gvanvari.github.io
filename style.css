@@ -400,6 +400,7 @@ article .icon {
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: stretch; /* make all boxes same height */
 }
 
 #projects .details-container {
@@ -409,7 +410,6 @@ article .icon {
     align-items: center;
     gap: 1rem;
     padding: 2rem;
-    height: 100%;
 }
 
 .color-container {
