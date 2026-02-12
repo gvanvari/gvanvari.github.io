@@ -9,9 +9,6 @@
     .about-container2 {
         flex-wrap: wrap;
     }
-    .carousel-item {
-        min-width: calc(50% - 1rem);
-    }
     #hobbies .details-container {
         flex: 1 1 calc(50% - 1rem);
     }
